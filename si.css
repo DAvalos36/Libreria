@@ -1,0 +1,9 @@
+.Centrar{
+    display:flex;
+    justify-content: center;
+    
+}
+
+.redondo{
+    border-radius: 5px;
+}
