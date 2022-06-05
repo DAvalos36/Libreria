@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2022 a las 19:55:18
+-- Tiempo de generación: 05-06-2022 a las 23:21:30
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.6
 
@@ -83,7 +83,7 @@ INSERT INTO `rangos` (`id`, `nombre`) VALUES
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nom_usuario` varchar(15) COLLATE utf8_bin NOT NULL,
-  `pass` varchar(15) COLLATE utf8_bin NOT NULL,
+  `pass` varchar(60) COLLATE utf8_bin NOT NULL,
   `nombre` varchar(30) COLLATE utf8_bin NOT NULL,
   `apellido` varchar(30) COLLATE utf8_bin NOT NULL,
   `rango` tinyint(11) NOT NULL DEFAULT 1
@@ -117,6 +117,7 @@ ALTER TABLE `rangos`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nom_usuario` (`nom_usuario`),
   ADD KEY `usuario_rango` (`rango`);
 
 --

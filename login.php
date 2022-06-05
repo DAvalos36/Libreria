@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION["id"])){
+        header("location: index.php");
+        exit("IDK");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +16,9 @@
 <body>
     <form action="resLogin.php" method="post">
         <label for="usuario">Nombre de Usuario</label><br>
-        <input type="text" id="usuario" name="usuario"><br>
+        <input type="text" id="usuario" name="usuario" required minlength="6"><br>
         <label for="pass">Contraseña:</label><br>
-        <input type="password" name="pass" id="pass"><br>
+        <input type="password" name="pass" id="pass" required minlength="6"><br>
         <input type="submit" value="Iniciar"> <input type="reset" value="Cancelar">
     </form>
 </body>

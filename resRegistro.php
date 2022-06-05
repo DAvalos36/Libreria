@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (isset($_SESSION["id"])){
+    header("location: index.php");
+    exit("IDK");
+}
 require_once("privado/configDB.php");
 $nombre = filter_input(INPUT_POST,"nombre");
 $apellido = filter_input(INPUT_POST,"apellido");
