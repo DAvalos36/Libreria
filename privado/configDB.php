@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";
 $pass = "";
-$db = "librecum";
+$db = "libreriacum";
 
 $base = new mysqli($host, $usuario, $pass, $db);
 if ($base->connect_error){
