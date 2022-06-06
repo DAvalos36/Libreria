@@ -15,5 +15,6 @@
 </head>
 <body>
     <h1>Aqui va a haber mas cosas xd!</h1>
+    <a href="resCerrar.php"><button>Cerrar Sesion!</button></a>
 </body>
 </html>
