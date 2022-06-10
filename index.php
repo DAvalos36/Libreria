@@ -11,9 +11,8 @@
 <head>
     <link rel="stylesheet" href="css/si.css">   
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
     <div class="Centrar">
@@ -44,6 +43,52 @@
     }
 
     ?>
+
+    </div>
+
+    <h1 class="title">Libreria de weyes que hicieron su jale</h1>
+
+    <div class="conteiner">
+
+        <div class="card">
+
+            <img src="img/images.jpg">
+            <h4>Libro :3</h4>
+            <p>Aqui iria una descripcion cum</p>
+            <a href="-link de drive">El link de drive</a>
+        </div>
+
+        <div class="card">
+
+            <img src="img/images.jpg">
+            <h4>Libro :3</h4>
+            <p>Aqui iria una descripcion cum</p>
+            <a href="-link de drive">El link de drive</a>
+        </div>
+
+        <div class="card">
+
+            <img src="img/images.jpg">
+            <h4>Libro :3</h4>
+            <p>Aqui iria una descripcion cum</p>
+            <a href="-link de drive">El link de drive</a>
+        </div>
+
+        <div class="card">
+
+            <img src="img/images.jpg">
+            <h4>Libro :3</h4>
+            <p>Aqui iria una descripcion cum</p>
+            <a href="-link de drive">El link de drive</a>
+        </div>
+
+        <div class="card">
+
+            <img src="img/images.jpg">
+            <h4>Libro :3</h4>
+            <p>Aqui iria una descripcion cum</p>
+            <a href="-link de drive">El link de drive</a>
+        </div>
 
     </div>
 
