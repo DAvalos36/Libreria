@@ -1,10 +1,10 @@
 <?php
     require_once("privado/configDB.php");
     session_start();
-    if(!isset($_SESSION["id"])){
-        header("location: login.php");
-        exit();
-    }
+    // if(!isset($_SESSION["id"])){
+    //     header("location: login.php");
+    //     exit();
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +17,8 @@
 <body>
     <div class="Centrar">
 
-        <form action="" method="post">
-            <input type="text" name="busqueda" id="" required>
+        <form action="resBusqueda.php" method="post">
+            <input type="text" name="busqueda" onkeyup="buscar(this.value)" id="" required>
             <input type="submit" name="enviar" value="Buscar">
         </form>
         <br>
@@ -27,22 +27,6 @@
     </div>
 
     <div class="Centrar">
-
-    <?php
-    if (isset($_POST['enviar'])) {
-
-        $busqueda = $_POST['busqueda'];  
-
-        $consulta = $base->query("SELECT * FROM usuarios WHERE nom_usuario LIKE '%$busqueda%'");
-
-        while ($row = $consulta->fetch_array()) {
-            echo $row['nom_usuario']. '<br>';
-        }
-
-        
-    }
-
-    ?>
 
     </div>
 
@@ -96,5 +80,6 @@
 
     <h1>Aqui va a haber mas cosas xd!</h1>
     <a href="resCerrar.php"><button>Cerrar Sesion!</button></a>
+    <script src="js/ajaxBuscar.js"></script>
 </body>
 </html>
