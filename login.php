@@ -19,19 +19,29 @@
 
 <div class="Centrar">
 
-    <form action="resLogin.php" method="post">
+    <div class="conteiner   ">
 
-        <label for="usuario">Nombre de Usuario: </label><br>
-        <input type="text" id="usuario" name="usuario" required minlength="6" class="redondo"><br>
-        <label for="pass">Contraseña:  </label><br>
-        <input type="password" name="pass" id="pass" required minlength="6" class="redondo"><br>
-        <div class="Centrar">
+        <div class="card">
 
-            <input type="submit" value="Iniciar"> <input type="reset" value="Cancelar">
+            <form action="resLogin.php" method="post">
+        
+                <label for="usuario">Nombre de Usuario: </label><br>
+                <input type="text" id="usuario" name="usuario" required minlength="6" class="redondo"><br>
+                <label for="pass">Contraseña:  </label><br>
+                <input type="password" name="pass" id="pass" required minlength="6" class="redondo"><br>
+                <div class="Centrar">
+        
+                    <input type="submit" value="Iniciar"> <input type="reset" value="Cancelar">
+        
+                </div>
+                
+            </form>
 
         </div>
-        
-    </form>
+
+
+    </div>
+
 
 
 </div>
