@@ -19,7 +19,7 @@ if (strlen($nombre) > 0 && strlen($apellido) > 0 && strlen($usuario) > 0 && strl
     $consulta  = $base->query($query);
     if ($consulta == true){
         echo "Usuario registrado";
-        header("Location: http://localhost/Libreria/index.php");
+        // header("Location: http://localhost/Libreria/index.php");
     }
     else{
         if ($base->errno == 1062){
@@ -29,6 +29,7 @@ if (strlen($nombre) > 0 && strlen($apellido) > 0 && strlen($usuario) > 0 && strl
             echo "Error dosconocido!";
         }
     }
+    // $consulta->free_result();
     $base->close();
 }
 else {

@@ -18,7 +18,8 @@
                 if(password_verify($pass, $info["pass"])){
                     echo "Sesion iniciada";
                     $_SESSION["id"] = $info["id"];
-                    header("location: index.php");
+                    $_SESSION["rango"] = $info["rango"];
+                    // header("location: index.php");
                 }
                 else {
                     echo "Contraseña incorrecta!";
@@ -31,6 +32,7 @@
         else {
             echo "Error en consulta";
         }
+        $resUsuario->free_result();
         $base->close();
     }
     else {

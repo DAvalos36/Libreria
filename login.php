@@ -19,12 +19,13 @@
 
 <div class="Centrar">
 
-    <form action="resLogin.php" method="post">
+    <form action="resLogin.php" method="post" onsubmit="login(event, this)">
 
         <label for="usuario">Nombre de Usuario: </label><br>
         <input type="text" id="usuario" name="usuario" required minlength="6" class="redondo"><br>
         <label for="pass">Contraseña:  </label><br>
         <input type="password" name="pass" id="pass" required minlength="6" class="redondo"><br>
+        <span id="respuesta"></span>
         <div class="Centrar">
 
             <input type="submit" value="Iniciar"> <input type="reset" value="Cancelar">
@@ -43,5 +44,7 @@
         <button onclick="location.href='http://localhost/Libreria/registrarse.php'">Registrarse</button>
 
     </div>
+
+    <script src="js/ajaxLogin.js"></script>
 </body>
 </html>

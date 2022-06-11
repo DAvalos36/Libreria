@@ -17,7 +17,7 @@
 <body>
     <div class="Centrar">
 
-        <form method="post" action="resRegistro.php">
+        <form method="post" action="resRegistro.php" onsubmit="registro(event, this)">
             <label for="nombre">Nombre(s)</label><br>
             <input type="text" id="nombre" name="nombre" required minlength="4"><br>
             <label for="apellido">Apellidos</label><br>
@@ -26,13 +26,12 @@
             <input type="text" id="usuario" name="usuario" required minlength="6"><br>
             <label for="contra">Contraseña</label><br>
             <input type="password" name="pass" id="contra" required minlength="6"><br>
+            <span id="respuesta"></span>
             <input type="submit" value="Enviar"> <input type="reset" value="Cancelar">
     
-    
-            
         </form>
 
-
     </div>
+    <script src="js/ajaxLogin.js"></script>
 </body>
 </html>
