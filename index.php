@@ -1,10 +1,10 @@
 <?php
     require_once("privado/configDB.php");
     session_start();
-    // if(!isset($_SESSION["id"])){
-    //     header("location: login.php");
-    //     exit();
-    // }
+    if(!isset($_SESSION["id"])){
+        header("location: login.php");
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="Centrar">
+    <div class="Centrar" id="resultados" >
 
     </div>
 
