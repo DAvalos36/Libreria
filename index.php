@@ -17,7 +17,7 @@
 <body>
     <div class="Centrar">
 
-        <form action="resBusqueda.php" method="post">
+        <form action="" method="post">
             <input type="text" name="busqueda" onkeyup="buscar(this.value)" id="" required>
             <input type="submit" name="enviar" value="Buscar">
         </form>
@@ -30,7 +30,7 @@
 
     </div>
 
-    <h1 class="title">Libreria de weyes que hicieron su jale</h1>
+    <h1 class="title">Libreria de vatos que hicieron su jale</h1>
 
     <div class="conteiner">
 
