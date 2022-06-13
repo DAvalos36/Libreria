@@ -13,6 +13,9 @@
 html, body{
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .body{
@@ -26,7 +29,7 @@ html, body{
 .title{
     text-align: center;
     font-size: 40px;
-    color: blue;
+    color: rgb(241, 143, 14);
     margin-top: 100px;
     font-weight: 100;
 }
@@ -52,6 +55,7 @@ html, body{
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
+    background-color: white;
 }
 
 .conteiner .card:hover{
@@ -82,6 +86,7 @@ html, body{
 }
 
 header{
+    height: 150px;
     z-index: 2;
     width: 100%;
     overflow: hidden;
@@ -91,7 +96,7 @@ header{
 
 .wrapper{
     width: 90%;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: auto;
     overflow: hidden;
 }
@@ -110,7 +115,7 @@ header .logo{
 
 header nav{
     float: right;
-    line-height: 200px;
+    line-height: 150px;
 }
 
 header nav a{
@@ -150,7 +155,7 @@ header nav a:hover{
     header nav {
         width: 100%;
         text-align: center;
-        line-height: 100px;
+        line-height: 10px;
 
     }
 
@@ -162,4 +167,57 @@ header nav a:hover{
     .header2 nav{
         line-height: 50px;
     }
+}
+
+.iniciar2{
+    width: 400px;
+    height: 380px;
+    background: #0749e2;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #252932;
+    padding: 20px 30px;
+    border-top: 4px solid #2e2727;
+    color: aliceblue;
+}
+
+.iniciar{
+    width: 400px;
+    height: 340px;
+    background: #0749e2;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #252932;
+    padding: 20px 30px;
+    border-top: 4px solid #2e2727;
+    color: aliceblue;
+}
+
+.iniciar h5{
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.control{
+    width: 94.5%;
+    border: 1px solid #000000;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252932;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.boton{
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    color: aliceblue;
+    border-radius: none;
+    margin-bottom: 15px;
 }

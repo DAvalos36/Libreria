@@ -15,24 +15,31 @@
     <title>Registrarse</title>
 </head>
 <body>
-    <div class="Centrar">
+    
+    <section class="iniciar2">
 
         <form method="post" action="resRegistro.php">
             <label for="nombre">Nombre(s)</label><br>
-            <input type="text" id="nombre" name="nombre" required minlength="4"><br>
+            <input class="control" type="text" id="nombre" name="nombre" required minlength="4"><br>
             <label for="apellido">Apellidos</label><br>
-            <input type="text" id="apellido" name="apellido" required minlength="4"><br>
+            <input class="control" type="text" id="apellido" name="apellido" required minlength="4"><br>
             <label for="usuario">Nombre de Usuario:</label><br>
-            <input type="text" id="usuario" name="usuario" required minlength="6"><br>
+            <input class="control" type="text" id="usuario" name="usuario" required minlength="6"><br>
             <label for="contra">Contraseña</label><br>
-            <input type="password" name="pass" id="contra" required minlength="6"><br>
-            <input type="submit" value="Enviar"> <input type="reset" value="Cancelar">
-    
-    
+            <input class="control" type="password" name="pass" id="contra" required minlength="6"><br>
+            <input class="boton" type="submit" value="Enviar"> 
             
         </form>
+        <a href="login.php">
+            
+            <button class="boton">Cancelar</button>
+
+        </a>
+
+    </section>
 
 
-    </div>
+
+    
 </body>
 </html>

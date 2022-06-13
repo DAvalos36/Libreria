@@ -17,7 +17,7 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="header.js"></script>
 </head>
-<body>
+<body background="img/libreria.jpg">
     <header>
 
         <div class="wrapper">
@@ -146,13 +146,18 @@
             <a href="https://drive.google.com/file/d/1uzLX3I5Rm3fbV4b51OEkub5E7yfwm6sE/view">PDF</a>
         </div>
 
-        <div class="card">
+        <a href="https://drive.google.com/file/d/1f5dwyjB1_5Qs_qoIOrbkJjoSV9R8Z7mn/view">
 
-            <img src="img/Captura10.png">
-            <h4>Ingeniero en Sistemas Computacionales</h4>
-            <p>"INNOVANDO LA EDUCACIÓN INFANTIL: WIKY PIWY SEGUNDA FASE"</p>
-            <a href="https://drive.google.com/file/d/1f5dwyjB1_5Qs_qoIOrbkJjoSV9R8Z7mn/view">PDF</a>
-        </div>
+            <div class="card">
+    
+                <img src="img/Captura10.png">
+                <h4>Ingeniero en Sistemas Computacionales</h4>
+                <p>"INNOVANDO LA EDUCACIÓN INFANTIL: WIKY PIWY SEGUNDA FASE"</p>
+                <a href="https://drive.google.com/u/1/uc?id=1rnjAtGzXmwMjOUaj6OxGSax9shzeGEJk&export=download">Descargar</a>
+            </div>
+
+        </a>
+
 
         <div class="card">
 

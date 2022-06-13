@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="img/icon-book.png">
     <link rel="stylesheet" href="css/si.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,42 +17,38 @@
 </head>
 <body>
 
+    <section class="iniciar">
 
-<div class="Centrar">
-
-    <div class="conteiner   ">
-
-        <div class="card">
-
-            <form action="resLogin.php" method="post">
+        <h5>Inicie sesion</h5>
+        <form action="resLogin.php" method="post">
+    
+            
+            <input class="control" type="text" id="usuario" name="usuario" required minlength="6" class="redondo" placeholder="Usuario">
+            
+            <input class="control" type="password" name="pass" id="pass" required minlength="6" class="redondo" placeholder="Contraseña">
+            <input class="boton" type="submit" value="Iniciar"> <input class="boton" type="reset" value="Cancelar">
+            
+    
+            
+            
+        </form>
+        <a href="registrarse.php">    
+            <button class="boton">Registrarse</button>     
+        </a>
         
-                <label for="usuario">Nombre de Usuario: </label><br>
-                <input type="text" id="usuario" name="usuario" required minlength="6" class="redondo"><br>
-                <label for="pass">Contraseña:  </label><br>
-                <input type="password" name="pass" id="pass" required minlength="6" class="redondo"><br>
-                <div class="Centrar">
-        
-                    <input type="submit" value="Iniciar"> <input type="reset" value="Cancelar">
-        
-                </div>
-                
-            </form>
-
-        </div>
+    </section>
 
 
-    </div>
-
-
-
-</div>
 
 
     
-    <div class="Centrar">
+        
 
-        <button onclick="location.href='http://localhost/Libreria/registrarse.php'">Registrarse</button>
 
-    </div>
+
+
+
+    
+    
 </body>
 </html>
