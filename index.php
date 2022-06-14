@@ -15,8 +15,6 @@
     <meta charset="UTF-8">
     <title>Inicio</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="header.js"></script>
 </head>
 <body background="img/libreria.jpg">
     <?php require_once("privado/modulos/navbar.php") ?>
@@ -64,5 +62,6 @@
 
 
     <script src="js/ajaxBuscar.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

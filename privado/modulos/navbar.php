@@ -1,4 +1,4 @@
-<header>
+<header id="header">
     <div class="wrapper">
         <div class="logo">
             <a href="index.php"><img src="img/icon-book.png"></a>
