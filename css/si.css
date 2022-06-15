@@ -73,6 +73,22 @@ body{
     transition: all 500ms ease;
 }
 
+iframe{
+    width: 100%;
+    height: 520px;
+    /* margin: auto; */
+    margin-bottom: 15px;
+}
+
+.contenedor-iframe{
+    margin: 50px auto;
+    width: 80%;
+}
+
+.Centrar h1{
+    text-align: center;
+}
+
 .qhacer .boton2{
     border-radius: 10px;
     display: inline-block;
