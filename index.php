@@ -41,19 +41,21 @@
             // print_r($resConsulta);
             if($resConsulta){
                 if($resConsulta->num_rows > 0){
-                    foreach ($resConsulta as $key => $value) {
-                        // print_r($value);
-                        tarjeta($value["link_imagen"], $value["titulo"], $value["fecha"], $value["link_google"] );
+                    foreach ($resConsulta as $key => $libro) {
+                        // print_r($libro);
+                        tarjeta($libro["id"],$libro["link_imagen"], $libro["titulo"], $libro["fecha"], $libro["link_google"] );
                     }
                 }
                 else{
                     echo "No se encontraron";
                 }
+                $resConsulta->free_result();
             }
             else{
                 echo "<h1> Error desconocido! </h1>";
                 echo "$base->errno";
             }
+            $base->close();
         ?>
 
 
