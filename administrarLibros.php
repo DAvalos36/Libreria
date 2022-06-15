@@ -24,13 +24,13 @@ $res = $base->query("SELECT `id`, `titulo` FROM `libros`");
     <section class="guardar">
         <form action="resAdminAgregarLibro.php" method="post" enctype="multipart/form-data" onsubmit="nuevoLibro(event,this)">
             <label for="titulo">Ingrese titulo de residencia:</label>
-            <input class="controls" type="text" name="titulo" id="titulo">
+            <input class="controls" type="text" name="titulo" id="titulo" required minlength="1">
             <label for="imagen">Adjunte imagen de archivo!</label>
-            <input class="controls" type="file" name="imagen" accept="image/*" id="imagen">
+            <input class="controls" type="file" name="imagen" accept="image/*" id="imagen" required>
             <label for="link">Link del archivo en drive!</label>
-            <input class="controls" type="url" name="link" id="link">
+            <input class="controls" type="url" name="link" id="link" required>
             <label for="fecha">Ingrese fecha que marca el trabajo!</label>
-            <input class="controls" type="date" name="fecha" id="fecha">
+            <input class="controls" type="date" name="fecha" id="fecha" required>
             <input class="boton" type="submit" value="Enviar!">
         </form>
         <a href="index.php">
