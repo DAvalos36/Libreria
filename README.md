@@ -1,5 +1,5 @@
 
-# Libreria De Residencias 😎 | 🚧En desarrolo🚧
+# Libreria De Residencias 😎 | 🚧En desarrollo🚧
 
 En esta aplicación se encuentran distintas tesis y residencias de alumnos del Instituto Tecnológico de Parral.
 Esta aplicación web fue creada como proyecto final de la materia de programación web #1.
