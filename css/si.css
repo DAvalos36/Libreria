@@ -3,6 +3,7 @@
 .Centrar{
     display:flex;
     justify-content: center;
+    color: #0fefff;
     
 }
 
@@ -27,11 +28,63 @@ body{
 }
 
 .title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 650px;
     text-align: center;
     font-size: 40px;
-    color: rgb(241, 143, 14);
+    color: #ffffff;
     margin-top: 100px;
     font-weight: 100;
+    background-color: rgba(163,160,158,0.6);
+}
+
+.qhacer{
+    height: 700px;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qhacer .boton1:hover{
+    background: #ece2c6;
+    border-radius: 50px;
+}
+
+.qhacer .boton2:hover{
+    background: #ece2c6;
+    border-radius: 50px;
+}
+
+.qhacer .boton1{
+    border-radius: 10px;
+    display: inline-block;
+    color: #1f1407;
+    text-decoration: none;
+    padding: 30px 40px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.qhacer .boton2{
+    border-radius: 10px;
+    display: inline-block;
+    color: #1f1407;
+    text-decoration: none;
+    padding: 30px 40px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
 }
 
 
@@ -47,15 +100,15 @@ body{
 }
 
 .conteiner .card{
-    width: 330px;
-    height: 490px;
+    width: 340px;
+    height: 510px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
-    background-color: white;
+    background-color: #f6f6f6;
 }
 
 .conteiner .card:hover{
@@ -90,7 +143,7 @@ header{
     z-index: 2;
     width: 100%;
     overflow: hidden;
-    background: #252932;
+    background: #a3a09e;
     margin-bottom: 20px;
 }
 
@@ -120,7 +173,7 @@ header nav{
 
 header nav a{
     display: inline-block;
-    color: azure;
+    color: #1f1407;
     text-decoration: none;
     padding: 10px 20px;
     line-height: normal;
@@ -132,7 +185,7 @@ header nav a{
 }
 
 header nav a:hover{
-    background: #0749e2;
+    background: #ece2c6;
     border-radius: 50px;
 }
 
@@ -172,24 +225,36 @@ header nav a:hover{
 .iniciar2{
     width: 400px;
     height: 420px;
-    background: #0749e2;
+    background: #0079ff;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #252932;
     padding: 20px 30px;
-    border-top: 4px solid #2e2727;
+    border-top: 4px solid #000000;
     color: aliceblue;
 }
 
 .iniciar{
     width: 400px;
-    height: 340px;
-    background: #0749e2;
+    height: 350px;
+    background: #0079ff;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #252932;
     padding: 20px 30px;
-    border-top: 4px solid #2e2727;
+    border-top: 5px solid #000000;
+    color: aliceblue;
+}
+
+.guardar{
+    width: 400px;
+    height: 450px;
+    background: #90673d;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #252932;
+    padding: 20px 30px;
+    border-top: 5px solid #1f1407;
     color: aliceblue;
 }
 
@@ -200,6 +265,17 @@ header nav a:hover{
     margin-bottom: 30px;
     border-bottom: 1px solid;
     font-size: 20px;
+}
+
+.controls{
+    width: 94.5%;
+    border: 1px solid #000000;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #f1eae4;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
 }
 
 .control{
@@ -216,8 +292,14 @@ header nav a:hover{
 .boton{
     width: 100%;
     height: 40px;
-    background: #000000;
-    color: aliceblue;
+    background: #f5f5f5;
+    color: #000000;
     border-radius: none;
     margin-bottom: 15px;
+}
+
+.boton:hover{
+    background: #D1E9FF;
+    border-radius: 50px;
+    
 }

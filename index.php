@@ -33,7 +33,7 @@
 
     </div>
 
-    <h1 class="title">Libreria de vatos que hicieron su jale</h1>
+    <h1 class="title">Residencias profecionales</h1>
 
     <div class="conteiner">
         <?php

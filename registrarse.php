@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
 </head>
-<body>
+<body background="img/puerta.jpg">
     
     <section class="iniciar2">
 
