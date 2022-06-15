@@ -74,10 +74,15 @@ body{
 }
 
 iframe{
-    width: 80%;
+    width: 100%;
     height: 520px;
     /* margin: auto; */
     margin-bottom: 15px;
+}
+
+.contenedor-iframe{
+    margin: 50px auto;
+    width: 80%;
 }
 
 .Centrar h1{

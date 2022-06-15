@@ -31,8 +31,10 @@ $id = $base->real_escape_string(filter_input(INPUT_GET, "id"));
             $linkVista = str_replace("/view", "/preview", $datos["link_google"]);
             $cadena = explode("/", $datos["link_google"]);
             $idGoogle = $cadena[5];
-            $linkDescarga = "https://drive.google.com/u/1/uc?id=$idGoogle&export=download"
+            $linkDescarga = "https://drive.google.com/u/1/uc?id=$idGoogle&export=download";
+            $base->query("INSERT INTO `visitas_libro`(`id_libro`) VALUES ('$id')");
     ?>
+            <div class="contenedor-iframe">
             <div class="Centrar">
                 <h1><?php echo $datos["titulo"] ?></h1>
             </div>
@@ -42,6 +44,7 @@ $id = $base->real_escape_string(filter_input(INPUT_GET, "id"));
             <div class="Centrar"><iframe src="<?php echo $linkVista?>"></iframe></div>
             <!-- <div class="Centrar"><a href="<?php echo $linkDescarga ?>"><button class="boton">Descargar</button></a></div> -->
             <a href="<?php echo $linkDescarga ?>"><button class="boton">Descargar</button></a>
+            </div>
     <?php
         $res->free_result();
         }
