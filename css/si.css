@@ -303,3 +303,34 @@ header nav a:hover{
     border-radius: 50px;
     
 }
+
+#main-container{
+	margin: 150px auto;
+	width: 600px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #90673d;
+	border-bottom: solid 5px #000000;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #ece2c6;
+	color: black;
+}

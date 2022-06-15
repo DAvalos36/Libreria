@@ -15,7 +15,8 @@
     <title>Administracion de Usuarios</title>
     <link rel="stylesheet" href="css/si.css">
 </head>
-<body>
+<body background="img/libreria.jpg">
+    <?php require_once("privado/modulos/navbar.php") ?>
     <div class="Centrar">
         <?php
             $query = "SELECT * FROM usuarios";
@@ -30,12 +31,28 @@
             }
         ?>
     </div>
-    <table>
-            <th>
-                <td>asd</td>
-                <td>asd</td>
-                <td>asd</td>
-            </th>
-    </table>
+    <div id="main-container">
+
+        <table>
+        <thead>
+            <tr>
+                <th>Descripción</th><th>Ira</th><th>we</th>
+            </tr>
+        </thead>
+
+            <tr>
+                <td>una</td><td>tabla</td><td>bien</td>
+            </tr>
+            <tr>
+                <td>C</td><td>UU</td><td>UUU</td>
+            </tr>
+            <tr>
+            <td>UU</td><td>UU</td><td>UUUUU</td>
+            </tr>
+            <tr>
+            <td>UUU</td><td>UU</td><td>MMMMMMMM</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
