@@ -22,7 +22,7 @@ $res = $base->query("SELECT `id`, `titulo` FROM `libros`");
 <body background="img/libreria.jpg">
     <?php require_once("privado/modulos/navbar.php") ?>
     <section class="guardar">
-        <form action="resAdminAgregarLibro.php" method="post" enctype="multipart/form-data">
+        <form action="resAdminAgregarLibro.php" method="post" enctype="multipart/form-data" onsubmit="nuevoLibro(event,this)">
             <label for="titulo">Ingrese titulo de residencia:</label>
             <input class="controls" type="text" name="titulo" id="titulo">
             <label for="imagen">Adjunte imagen de archivo!</label>

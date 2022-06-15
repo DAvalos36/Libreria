@@ -22,7 +22,8 @@
         $query = "INSERT INTO `libros`(`titulo`, `link_google`, `link_imagen`, `fecha`) VALUES ('$titulo','$link','$dirImagen','$fecha')";
         $base->query($query);
         $base->close();
-        header("Location: http://localhost/Libreria/index.php");
+        // header("Location: http://localhost/Libreria/index.php");
+        echo "Libro agregado";
     }
     else{
         echo "No se recibieron todos los datos!";
