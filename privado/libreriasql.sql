@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-06-2022 a las 03:02:29
+-- Tiempo de generación: 16-06-2022 a las 04:57:14
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.6
 
@@ -18,20 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `libreriacum`
+-- Base de datos: `libreria`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `creadores_libro`
---
-
-CREATE TABLE `creadores_libro` (
-  `id` int(11) NOT NULL,
-  `id_libro` int(11) NOT NULL,
-  `nombre_persona` varchar(45) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -82,8 +70,7 @@ CREATE TABLE `rangos` (
 
 INSERT INTO `rangos` (`id`, `nombre`) VALUES
 (1, 'Administrador'),
-(2, 'Normal'),
-(3, 'Creador');
+(2, 'Normal');
 
 -- --------------------------------------------------------
 
@@ -97,7 +84,7 @@ CREATE TABLE `usuarios` (
   `pass` varchar(60) COLLATE utf8_bin NOT NULL,
   `nombre` varchar(30) COLLATE utf8_bin NOT NULL,
   `apellido` varchar(30) COLLATE utf8_bin NOT NULL,
-  `rango` tinyint(11) NOT NULL DEFAULT 1,
+  `rango` tinyint(11) NOT NULL DEFAULT 2,
   `puede_entrar` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -106,18 +93,31 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nom_usuario`, `pass`, `nombre`, `apellido`, `rango`, `puede_entrar`) VALUES
-(30, 'Administrador', '$2y$10$l3Ld2sKjvAX7oWMicDzMFeUv.29J7AjCWKx2m1.mT69m1rfwVlEh.', 'Administrador', 'Chido!', 3, 1);
+(30, 'Administrador', '$2y$10$l3Ld2sKjvAX7oWMicDzMFeUv.29J7AjCWKx2m1.mT69m1rfwVlEh.', 'Administrador', 'Chido!', 1, 1),
+(34, 'UsuarioComun', '$2y$10$WhmXd80vDviloxLguvkcxuIcmu4LzqrqD90mz/o/iF5HjZfShH.xm', 'David', 'Avalos', 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `visitas_libro`
+--
+
+CREATE TABLE `visitas_libro` (
+  `id` int(11) NOT NULL,
+  `id_libro` int(11) NOT NULL,
+  `fecha` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `visitas_libro`
+--
+
+INSERT INTO `visitas_libro` (`id`, `id_libro`, `fecha`) VALUES
+(5, 5, '2022-06-15 20:55:51');
 
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `creadores_libro`
---
-ALTER TABLE `creadores_libro`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_libro` (`id_libro`);
 
 --
 -- Indices de la tabla `libros`
@@ -140,6 +140,13 @@ ALTER TABLE `usuarios`
   ADD KEY `usuario_rango` (`rango`);
 
 --
+-- Indices de la tabla `visitas_libro`
+--
+ALTER TABLE `visitas_libro`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_libro` (`id_libro`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -147,7 +154,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `rangos`
@@ -159,23 +166,29 @@ ALTER TABLE `rangos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT de la tabla `visitas_libro`
+--
+ALTER TABLE `visitas_libro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `creadores_libro`
---
-ALTER TABLE `creadores_libro`
-  ADD CONSTRAINT `id_libro` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuario_rango` FOREIGN KEY (`rango`) REFERENCES `rangos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `visitas_libro`
+--
+ALTER TABLE `visitas_libro`
+  ADD CONSTRAINT `id_libro` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
