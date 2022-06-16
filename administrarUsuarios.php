@@ -5,6 +5,9 @@
         exit(401);
     }
     require_once("privado/configDB.php");
+    require_once("privado/modulos/renglonUsuarios.php");
+    $query = "SELECT `id`, `nom_usuario`, `rango`, `puede_entrar` FROM `usuarios`";
+    $res = $base->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,42 +20,24 @@
 </head>
 <body background="img/libreria.jpg">
     <?php require_once("privado/modulos/navbar.php") ?>
-    <div class="Centrar">
-        <?php
-            $query = "SELECT * FROM usuarios";
-            $res = $base->query($query);
-            if( $res->num_rows > 0){
-                foreach ($res as $key => $value) {
-                    echo "$value[nombre] <br>";
-                }
-            }
-            else{
-                echo "<h1> No hay usuarios registrados... </h1>";
-            }
-        ?>
-    </div>
     <div id="main-container">
-
+        <?php if($res->num_rows > 0){ ?>
         <table>
-        <thead>
-            <tr>
-                <th>Descripción</th><th>Ira</th><th>we</th>
-            </tr>
-        </thead>
-
-            <tr>
-                <td>una</td><td>tabla</td><td>bien</td>
-            </tr>
-            <tr>
-                <td>C</td><td>UU</td><td>UUU</td>
-            </tr>
-            <tr>
-            <td>UU</td><td>UU</td><td>UUUUU</td>
-            </tr>
-            <tr>
-            <td>UUU</td><td>UU</td><td>MMMMMMMM</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Permisos</th>
+                    <th>Bloquear/Desbloquear</th>
+                </tr>
+            </thead>
+            <?php
+                foreach ($res as $key => $value) {
+                    renglon($value["id"], $value["nom_usuario"], $value["rango"], $value["puede_entrar"]);
+                }
+            ?>
         </table>
+        <?php } ?>
     </div>
 </body>
 </html>
