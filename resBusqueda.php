@@ -5,13 +5,13 @@
         exit(401);
     }
     require_once("privado/configDB.php");
+    require_once("privado/modulos/cardLibros.php");
     $busqueda = filter_input(INPUT_POST, 'busqueda');
     $busqueda = $base->real_escape_string($busqueda);
-    $consulta = $base->query("SELECT * FROM usuarios WHERE nom_usuario LIKE '%$busqueda%'");
+    $consulta = $base->query("SELECT * FROM `libros` WHERE titulo LIKE '%$busqueda%'");
     if ($consulta->num_rows > 0){
-        foreach ($consulta->fetch_all() as $key => $resultado) {
-            print_r($resultado);
-            echo "<br>";
+        foreach ($consulta as $key => $resultado) {
+            tarjeta($resultado["id"],$resultado["link_imagen"], $resultado["titulo"], $resultado["fecha"], $resultado["link_google"] );
         }
     }
     else {

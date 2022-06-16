@@ -2,7 +2,7 @@ var resultados = document.getElementById("resultados");
 function buscar(texto) {
     console.log(texto);
 
-    if (texto.length > 0) {
+    if (texto.length >= 0) {
         var conexion;
 
         if (window.XMLHttpRequest) {

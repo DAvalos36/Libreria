@@ -21,21 +21,17 @@
 
     <div class="Centrar">
 
-        <form action="" method="post">
-            <input type="text" name="busqueda" onkeyup="buscar(this.value)" id="" required>
-            <input type="submit" name="enviar" value="Buscar">
-        </form>
+        <!-- <form action="" method="post"> -->
+            <input type="search" name="busqueda" class="barraBuscar" onkeyup="buscar(this.value)" placeholder="Busca libros aqui..." required>
+        <!-- </form> -->
 
     </div>
         
 
-    <div class="Centrar" id="resultados" >
-
-    </div>
 
     <h1 class="title">Residencias profecionales</h1>
 
-    <div class="conteiner">
+    <div class="conteiner" id="resultados">
         <?php
             $resConsulta = $base->query("SELECT * FROM `libros` ");
             // print_r($resConsulta);
