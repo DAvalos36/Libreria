@@ -37,7 +37,11 @@
                 }
             ?>
         </table>
-        <?php } ?>
+        <?php }
+        $res->free_result();
+        $base->close();
+        ?>
     </div>
+    <script src="js/ajaxUsuarios.js"></script>
 </body>
 </html>

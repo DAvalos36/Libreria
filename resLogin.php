@@ -10,12 +10,15 @@
 
     if(strlen($usuario) > 0 && strlen($pass) > 0){
         $usuario = $base->real_escape_string($usuario);
-        $query = "SELECT `id`, `nom_usuario`, `pass`, `nombre`, `apellido`, `rango` FROM `usuarios` WHERE `nom_usuario` = '$usuario'";
+        $query = "SELECT * FROM `usuarios` WHERE `nom_usuario` = '$usuario'";
         $resUsuario = $base->query($query);
         if($resUsuario){
             if($resUsuario->num_rows == 1){
                 $info = $resUsuario->fetch_assoc();
-                if(password_verify($pass, $info["pass"])){
+                if ($info["puede_entrar"] == 0){
+                    echo "Este usuario fue bloqueado";
+                }
+                else if(password_verify($pass, $info["pass"])){
                     echo "Sesion iniciada";
                     $_SESSION["id"] = $info["id"];
                     $_SESSION["rango"] = $info["rango"];
