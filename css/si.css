@@ -41,6 +41,20 @@ body{
     background-color: rgba(163,160,158,0.6);
 }
 
+.title2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    width: 650px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 100px;
+    font-weight: 100;
+    background-color: rgba(163,160,158,0.6);
+}
+
 .qhacer{
     height: 700px;
     /*IMPORTANTE*/

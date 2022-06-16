@@ -36,7 +36,7 @@ $id = $base->real_escape_string(filter_input(INPUT_GET, "id"));
     ?>
             <div class="contenedor-iframe">
             <div class="Centrar">
-                <h1><?php echo $datos["titulo"] ?></h1>
+                <h1 class="title2"><?php echo $datos["titulo"] ?></h1>
             </div>
             <div class="Centrar">
                 <h5><?php echo $datos["fecha"] ?></h5>
