@@ -5,12 +5,13 @@ function renglon($id, $usuario, $rango, $iniciar)
     $msjRango = ($rango == 2) ? "Volver Administrador" : "Quitar Privilegios de Administrador" ;
     $opcion1 = ($iniciar == 1) ? 2: 3;
     $opcion2 = ($rango == 2) ? 0: 1;
+    $puedeBanearse = ($id == $_SESSION["id"]) ? "disabled" : "" ;
     ?>
     <tr>
         <td><?php echo $id ?></td>
         <td><?php echo $usuario ?></td>
-        <td><button class="boton" onclick='<?php echo "modificar($opcion1, $id)" ?>'><?php echo $msjBloq ?></button></td>
-        <td><button class="boton" onclick='<?php echo "modificar($opcion2, $id)" ?>'><?php echo $msjRango ?></button></td>
+        <td><button class="boton" <?php echo $puedeBanearse ?> onclick='<?php echo "modificar($opcion1, $id)" ?>'><?php echo $msjBloq ?></button></td>
+        <td><button class="boton" <?php echo $puedeBanearse ?> onclick='<?php echo "modificar($opcion2, $id)" ?>'><?php echo $msjRango ?></button></td>
     </tr>
 <?php }
 ?>
