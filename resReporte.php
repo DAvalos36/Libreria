@@ -32,7 +32,7 @@ require_once("privado/configDB.php");
             font-size: larger;
         }
     </style>
-    <img src="http://<?php echo $_SERVER['HTTP_HOST'];?>/Sistema-de-Usuarios/logo.png" height="150px" align="right">
+    <img src="https://i.ibb.co/CPMpK7Q/logo.png" height="150px" align="right">
     <!-- <img src="http://<?php echo $_SERVER['HTTP_HOST'];?>/Libreria/img/icon-book.png" width="200px" height="150px" align="left"> -->
     <img src="https://raw.githubusercontent.com/DAvalos36/Libreria/main/img/icon-book.png" width="200px" height="150px" align="left">
     <h1 align="center">REPORTE</h1>
