@@ -5,7 +5,7 @@ function renglon($id, $usuario, $rango, $iniciar)
     $msjRango = ($rango == 2) ? "Volver Administrador" : "Quitar Privilegios de Administrador" ;
     $opcion1 = ($iniciar == 1) ? 2: 3;
     $opcion2 = ($rango == 2) ? 0: 1;
-    $puedeBanearse = ($id == $_SESSION["id"]) ? "disabled" : "" ;
+    $puedeBanearse = ($id == $_SESSION["id"]) ? "hidden" : "" ;
     ?>
     <tr>
         <td><?php echo $id ?></td>
